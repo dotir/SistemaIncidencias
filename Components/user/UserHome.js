@@ -3,9 +3,12 @@ import { View, Text, TouchableOpacity, StyleSheet, ScrollView } from 'react-nati
 import Icon from 'react-native-vector-icons/FontAwesome';
 import { useNavigation } from '@react-navigation/native';
 import styles from '../../utils/StylesHomes';
+import CreateIncident from '../user/CreateIncident';
+import ViewIncident from '../user/ViewIncidents';
+import TrainingMaterials from '../user/TrainingMaterials';
 
 const AdminHomeScreen = () => {
-    const [activeTab, setActiveTab] = useState('userManagement');
+    const [activeTab, setActiveTab] = useState('createIncident');
     const [showMenu, setShowMenu] = useState(false);
     const [menuPosition, setMenuPosition] = useState({ x: 0, y: 0 });
     const menuIconRef = useRef(null);
@@ -58,19 +61,13 @@ const AdminHomeScreen = () => {
             <View style={styles.content}>
                 <View style={styles.tabContent}>
                     {activeTab === 'createIncident' && (
-                        <View>
-                            <Text>Crear Incidencia</Text>
-                        </View>
+                        <CreateIncident/>
                     )}
                     {activeTab === 'viewIncident' && (
-                        <View>
-                            <Text>ver Incidencias</Text>
-                        </View>
+                        <ViewIncident/>
                     )}
                     {activeTab === 'trainingMaterials' && (
-                        <View>
-                            <Text>Gestión de Capacitación</Text>
-                        </View>
+                        <TrainingMaterials/>
                     )}
                 </View>
                 <View style={styles.sidebar}>

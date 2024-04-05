@@ -3,6 +3,9 @@ import { View, Text, TouchableOpacity, StyleSheet, ScrollView } from 'react-nati
 import Icon from 'react-native-vector-icons/FontAwesome';
 import { useNavigation } from '@react-navigation/native';
 import styles from '../../utils/StylesHomes';
+import IncidentManagement from '../admin/IncidentManagement';
+import TrainingManagement from '../admin/TrainingManagement';
+import UserManagement from '../admin/UserManagement';
 
 const AdminHomeScreen = () => {
   const [activeTab, setActiveTab] = useState('userManagement');
@@ -58,19 +61,13 @@ const AdminHomeScreen = () => {
       <View style={styles.content}>
         <View style={styles.tabContent}>
           {activeTab === 'userManagement' && (
-            <View>
-              <Text>Contenido de Gestión de Usuarios</Text>
-            </View>
+            <UserManagement />
           )}
           {activeTab === 'incidentManagement' && (
-            <View>
-              <Text>Contenido de Gestión de Incidencias</Text>
-            </View>
+            <IncidentManagement />
           )}
           {activeTab === 'trainingManagement' && (
-            <View>
-              <Text>Contenido de Gestión de Capacitación</Text>
-            </View>
+            <TrainingManagement />
           )}
         </View>
         <View style={styles.sidebar}>
