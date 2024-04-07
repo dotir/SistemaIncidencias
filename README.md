@@ -1,0 +1,39 @@
+<p align="center">
+  <a href="https://expo.dev/" target="_blank">
+    <img src="https://raw.githubusercontent.com/expo/expo/master/templates/expo-template-blank/assets/splash.png" width="200" alt="Expo Logo" />
+  </a>
+</p>
+
+<h1 align="center">Proyecto Expo</h1>
+
+<p align="center">
+  Un proyecto de React Native creado con Expo, una cadena de herramientas construida alrededor de React Native para facilitar el proceso de desarrollo.
+</p>
+
+<p align="center">
+  <a href="https://www.npmjs.com/package/expo" target="_blank">
+    <img src="https://img.shields.io/npm/v/expo" alt="Expo Version" />
+  </a>
+  <a href="https://www.npmjs.com/package/expo" target="_blank">
+    <img src="https://img.shields.io/npm/l/expo" alt="Package License" />
+  </a>
+  <a href="https://www.npmjs.com/package/expo" target="_blank">
+    <img src="https://img.shields.io/npm/dm/expo" alt="NPM Downloads" />
+  </a>
+  <a href="https://github.com/expo/expo" target="_blank">
+    <img src="https://img.shields.io/github/stars/expo/expo?style=social" alt="GitHub Stars" />
+  </a>
+</p>
+
+## Description
+
+Este es un proyecto Expo, una cadena de herramientas construida alrededor de React Native para facilitar el proceso de desarrollo. Expo le permite crear aplicaciones móviles nativas utilizando JavaScript y React.
+
+## Installation
+
+Para comenzar, asegúrese de tener Node.js y Expo CLI instalados globalmente. Luego, sigue estos pasos:
+
+1. Clone the repository:
+
+   ```bash
+   git clone https://github.com/dotir/SistemaIncidencias.git
