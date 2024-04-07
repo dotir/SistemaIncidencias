@@ -1,6 +1,6 @@
 <p align="center">
   <a href="https://expo.dev/" target="_blank">
-    <img src="https://raw.githubusercontent.com/expo/expo/master/templates/expo-template-blank/assets/splash.png" width="200" alt="Expo Logo" />
+    <img src="https://bookface-images.s3.amazonaws.com/logos/bf3ca13e31f46bc60e117c9f9e05f6be6c95ebf5.png" width="200" alt="Expo Logo" />
   </a>
 </p>
 
