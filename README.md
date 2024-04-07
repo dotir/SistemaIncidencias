@@ -25,15 +25,6 @@
   </a>
 </p>
 
-## Description
+## Descripcion
 
 Este es un proyecto Expo, una cadena de herramientas construida alrededor de React Native para facilitar el proceso de desarrollo. Expo le permite crear aplicaciones móviles nativas utilizando JavaScript y React.
-
-## Installation
-
-Para comenzar, asegúrese de tener Node.js y Expo CLI instalados globalmente. Luego, sigue estos pasos:
-
-1. Clone the repository:
-
-   ```bash
-   git clone https://github.com/dotir/SistemaIncidencias.git
