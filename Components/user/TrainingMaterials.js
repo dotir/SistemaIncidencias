@@ -57,7 +57,7 @@ const TrainingMaterials = () => {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#fff',
+    backgroundColor: 'transparent',
     padding: 16,
   },
   title: {

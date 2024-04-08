@@ -1,5 +1,5 @@
 import React, { useState, useRef, useEffect } from 'react';
-import { View, Text, TouchableOpacity, StyleSheet, ScrollView } from 'react-native';
+import { View, Text, TouchableOpacity, StyleSheet, ScrollView, Image } from 'react-native';
 import Icon from 'react-native-vector-icons/FontAwesome';
 import { useNavigation } from '@react-navigation/native';
 import styles from '../../utils/StylesHomes';
@@ -59,15 +59,19 @@ const AdminHomeScreen = () => {
                 </View>
             )}
             <View style={styles.content}>
+                <Image
+                    source={require('../../assets/logo.png')}
+                    style={styles.logo}
+                />
                 <View style={styles.tabContent}>
                     {activeTab === 'createIncident' && (
-                        <CreateIncident/>
+                        <CreateIncident />
                     )}
                     {activeTab === 'viewIncident' && (
-                        <ViewIncident/>
+                        <ViewIncident />
                     )}
                     {activeTab === 'trainingMaterials' && (
-                        <TrainingMaterials/>
+                        <TrainingMaterials />
                     )}
                 </View>
                 <View style={styles.sidebar}>

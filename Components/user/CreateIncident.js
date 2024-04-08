@@ -1,15 +1,22 @@
 import React, { useState } from 'react';
 import { View, Text, TextInput, TouchableOpacity, StyleSheet } from 'react-native';
+import DateTimePicker from '@react-native-community/datetimepicker';
 import * as ImagePicker from 'expo-image-picker';
 import axios from 'axios';
 
 const CreateIncident = () => {
-  const [date, setDate] = useState('');
+  const [date, setDate] = useState(new Date());
+  const [showDatePicker, setShowDatePicker] = useState(false);
   const [detail, setDetail] = useState('');
   const [photos, setPhotos] = useState([]);
 
-  const handleDateChange = (text) => {
-    setDate(text);
+  const handleShowDatePicker = () => {
+    setShowDatePicker(true);
+  };
+
+  const handleDateChange = (event, selectedDate) => {
+    setShowDatePicker(false);
+    setDate(selectedDate || date); // Actualizar solo si se selecciona una nueva fecha
   };
 
   const handleDetailChange = (text) => {
@@ -61,12 +68,25 @@ const CreateIncident = () => {
   return (
     <View style={styles.container}>
       <Text style={styles.title}>Crear Incidencia</Text>
-      <TextInput
-        style={styles.input}
-        placeholder="Fecha"
-        value={date}
-        onChangeText={handleDateChange}
-      />
+      <TouchableOpacity style={styles.button} onPress={handleShowDatePicker}>
+        <Text style={styles.buttonText}> Seleccionar Fecha</Text>
+      </TouchableOpacity>
+
+      {showDatePicker && (
+        <DateTimePicker
+          value={date}
+          mode="date"
+          display="default" // Mostrar por defecto según la plataforma
+          onChange={handleDateChange}
+        />
+      )}
+      <Text style={styles.dateText}>
+        {date.toLocaleDateString('es-ES', {
+          day: 'numeric',
+          month: 'long',
+          year: 'numeric',
+        })}
+      </Text>
       <TextInput
         style={styles.input}
         placeholder="Detalle"
@@ -87,7 +107,7 @@ const CreateIncident = () => {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#fff',
+    backgroundColor: 'transparent',
     padding: 16,
   },
   title: {
@@ -101,6 +121,7 @@ const styles = StyleSheet.create({
     borderWidth: 1,
     marginBottom: 10,
     paddingHorizontal: 10,
+    borderRadius: 8,
   },
   button: {
     backgroundColor: '#2196F3',
@@ -112,6 +133,9 @@ const styles = StyleSheet.create({
   buttonText: {
     color: '#fff',
     fontWeight: 'bold',
+  },
+  dateText: {
+    marginBottom: 12,
   },
 });
 

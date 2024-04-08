@@ -3,7 +3,7 @@ import { StyleSheet } from 'react-native';
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#fff',
+    backgroundColor: 'rgba(255, 255, 255, 0.8)',
   },
   header: {
     backgroundColor: '#2196F3',
@@ -72,6 +72,15 @@ const styles = StyleSheet.create({
     fontSize: 16,
     fontWeight: 'bold',
   },
+  logo: {
+    width: 200,
+    height: 200,
+    position: 'absolute',
+    top: '50%',
+    left: '50%',
+    transform: [{ translateX: -100 }, { translateY: -100 }],
+    opacity: 0.4,
+  }
 });
 
 export default styles;
